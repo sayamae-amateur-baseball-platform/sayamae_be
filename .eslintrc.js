@@ -23,5 +23,9 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     'unused-imports/no-unused-imports': 'error',
     'import/no-unresolved': 'off',
+    '@typescript-eslint/member-ordering': [
+      'error',
+      { classes: ['field', 'constructor', 'method'] },
+    ],
   },
 };
