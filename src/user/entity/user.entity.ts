@@ -35,7 +35,7 @@ export class User {
   /**
    * 성별
    */
-  @IsEnum(Sex, { message: '올바른 성별 형식이 아닙니다.' })
+  @IsEnum(Sex)
   @IsNotEmpty()
   sex: Sex;
 
@@ -78,7 +78,7 @@ export class User {
   /**
    * 투수 좌/우
    */
-  @IsEnum(PitchingType, { message: '올바른 투수 형식이 아닙니다.' })
+  @IsEnum(PitchingType)
   @IsNotEmpty()
   pitchingType: PitchingType;
 }
