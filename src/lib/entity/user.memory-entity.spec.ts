@@ -1,11 +1,11 @@
-import { User } from './user.entity';
-import { Sex } from './sex';
-import { BattingType } from './batting-type';
-import { PitchingType } from './pitching-type';
+import { UserMemoryEntity } from './user.memory-entity';
+import { Sex } from '../../user/entity/sex';
+import { BattingType } from '../../user/entity/batting-type';
+import { PitchingType } from '../../user/entity/pitching-type';
 import { validateSync, ValidationError } from 'class-validator';
 
-describe('UserEntity', () => {
-  let user: User;
+describe('UserMemoryEntity', () => {
+  let user: UserMemoryEntity;
 
   const nickname = 'nickname';
   const password = 'password';
@@ -19,7 +19,7 @@ describe('UserEntity', () => {
   const pitchingType = PitchingType.RIGHT;
 
   beforeEach(() => {
-    user = new User();
+    user = new UserMemoryEntity();
     user.nickname = nickname;
     user.password = password;
     user.name = name;
