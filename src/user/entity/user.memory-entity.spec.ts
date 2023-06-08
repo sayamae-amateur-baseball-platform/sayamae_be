@@ -21,17 +21,20 @@ describe('UserMemoryEntity', () => {
   const pitchingType = PitchingType.RIGHT;
 
   beforeEach(() => {
-    user = new UserMemoryEntity();
-    user.nickname = nickname;
-    user.password = password;
-    user.name = name;
-    user.sex = sex;
-    user.birthDate = birthDate;
-    user.photo = photo;
-    user.phoneNumber = phoneNumber;
-    user.hopePosition = hopePosition;
-    user.battingType = battingType;
-    user.pitchingType = pitchingType;
+    user = UserMemoryEntity.of(
+      id,
+      userName,
+      nickname,
+      password,
+      name,
+      sex,
+      birthDate,
+      photo,
+      phoneNumber,
+      hopePosition,
+      battingType,
+      pitchingType,
+    );
   });
 
   it('유저 생성 제대로 생성 됨?', () => {

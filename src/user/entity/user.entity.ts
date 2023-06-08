@@ -63,4 +63,19 @@ export abstract class User {
    * 투수 좌/우
    */
   pitchingType: PitchingType;
+
+  static of: (
+    id: number,
+    userName: string,
+    nickname: string,
+    password: string,
+    name: string,
+    sex: Sex,
+    birthDate: string,
+    photo: string,
+    phoneNumber: string,
+    hopePosition: string,
+    battingType: BattingType,
+    pitchingType: PitchingType,
+  ) => User;
 }
