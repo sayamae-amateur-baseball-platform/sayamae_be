@@ -44,7 +44,7 @@ export class User {
    */
   @IsDateString()
   @IsNotEmpty()
-  birth: string;
+  birthDate: string;
 
   /**
    * S3에 저장한 사진 URL
