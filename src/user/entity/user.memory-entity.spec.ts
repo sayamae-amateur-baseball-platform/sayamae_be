@@ -1,7 +1,7 @@
 import { UserMemoryEntity } from './user.memory-entity';
-import { Sex } from '../../user/entity/sex';
-import { BattingType } from '../../user/entity/batting-type';
-import { PitchingType } from '../../user/entity/pitching-type';
+import { Sex } from './sex';
+import { BattingType } from './batting-type';
+import { PitchingType } from './pitching-type';
 import { validateSync, ValidationError } from 'class-validator';
 
 describe('UserMemoryEntity', () => {

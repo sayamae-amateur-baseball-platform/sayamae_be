@@ -8,10 +8,10 @@ import {
   IsString,
 } from 'class-validator';
 
-import { BattingType } from '../../user/entity/batting-type';
-import { PitchingType } from '../../user/entity/pitching-type';
-import { Sex } from '../../user/entity/sex';
-import { User } from '../../user/entity/user.entity';
+import { BattingType } from './batting-type';
+import { PitchingType } from './pitching-type';
+import { Sex } from './sex';
+import { User } from './user.entity';
 
 export class UserMemoryEntity implements User {
   @IsNumber()
