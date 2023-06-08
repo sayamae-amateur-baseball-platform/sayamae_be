@@ -11,7 +11,7 @@ describe('UserEntity', () => {
   const password = 'password';
   const name = 'name';
   const sex = Sex.MALE;
-  const birth = '2020-01-01';
+  const birthDate = '2020-01-01';
   const photo = 'photo';
   const phoneNumber = '01012345678';
   const hopePosition = 'hopePosition';
@@ -24,7 +24,7 @@ describe('UserEntity', () => {
     user.password = password;
     user.name = name;
     user.sex = sex;
-    user.birth = birth;
+    user.birthDate = birthDate;
     user.photo = photo;
     user.phoneNumber = phoneNumber;
     user.hopePosition = hopePosition;
@@ -41,7 +41,7 @@ describe('UserEntity', () => {
     expect(user.password).toBe(password);
     expect(user.name).toBe(name);
     expect(user.sex).toBe(sex);
-    expect(user.birth).toBe(birth);
+    expect(user.birthDate).toBe(birthDate);
     expect(user.photo).toBe(photo);
     expect(user.phoneNumber).toBe(phoneNumber);
     expect(user.hopePosition).toBe(hopePosition);
