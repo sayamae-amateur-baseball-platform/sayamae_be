@@ -62,4 +62,35 @@ export class UserMemoryEntity implements User {
   @IsEnum(PitchingType)
   @IsNotEmpty()
   pitchingType: PitchingType;
+
+  static of(
+    id: number,
+    userName: string,
+    nickname: string,
+    password: string,
+    name: string,
+    sex: Sex,
+    birthDate: string,
+    photo: string,
+    phoneNumber: string,
+    hopePosition: string,
+    battingType: BattingType,
+    pitchingType: PitchingType,
+  ): UserMemoryEntity {
+    const user = new UserMemoryEntity();
+    user.id = id;
+    user.userName = userName;
+    user.nickname = nickname;
+    user.password = password;
+    user.name = name;
+    user.sex = sex;
+    user.birthDate = birthDate;
+    user.photo = photo;
+    user.phoneNumber = phoneNumber;
+    user.hopePosition = hopePosition;
+    user.battingType = battingType;
+    user.pitchingType = pitchingType;
+
+    return user;
+  }
 }
