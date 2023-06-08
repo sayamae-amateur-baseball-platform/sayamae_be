@@ -1,6 +1,7 @@
 import { BattingType } from './batting-type';
 import { PitchingType } from './pitching-type';
 import { Sex } from './sex';
+import { Position } from './position';
 
 export abstract class User {
   /**
@@ -30,11 +31,6 @@ export abstract class User {
   name: string;
 
   /**
-   * 성별
-   */
-  sex: Sex;
-
-  /**
    * 생년월일
    */
   birthDate: string;
@@ -50,9 +46,14 @@ export abstract class User {
   phoneNumber: string;
 
   /**
+   * 성별
+   */
+  sex: Sex;
+
+  /**
    * 희망 포지션
    */
-  hopePosition: string; //TODO: 포지션이 정해져 있을테니까 enum으로 변경
+  hopePosition: Position;
 
   /**
    * 타격 좌/우
@@ -70,11 +71,11 @@ export abstract class User {
     nickname: string,
     password: string,
     name: string,
-    sex: Sex,
     birthDate: string,
     photo: string,
     phoneNumber: string,
-    hopePosition: string,
+    sex: Sex,
+    hopePosition: Position,
     battingType: BattingType,
     pitchingType: PitchingType,
   ) => User;

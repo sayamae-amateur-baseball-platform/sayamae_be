@@ -11,6 +11,7 @@ import {
 import { BattingType } from './batting-type';
 import { PitchingType } from './pitching-type';
 import { Sex } from './sex';
+import { Position } from './position';
 import { User } from './user.entity';
 
 export class UserMemoryEntity implements User {
@@ -34,10 +35,6 @@ export class UserMemoryEntity implements User {
   @IsNotEmpty()
   name: string;
 
-  @IsEnum(Sex)
-  @IsNotEmpty()
-  sex: Sex;
-
   @IsDateString()
   @IsNotEmpty()
   birthDate: string;
@@ -51,9 +48,13 @@ export class UserMemoryEntity implements User {
   @IsNotEmpty()
   phoneNumber: string;
 
-  @IsString()
+  @IsEnum(Sex)
   @IsNotEmpty()
-  hopePosition: string;
+  sex: Sex;
+
+  @IsEnum(Position)
+  @IsNotEmpty()
+  hopePosition: Position;
 
   @IsEnum(BattingType)
   @IsNotEmpty()
@@ -69,11 +70,11 @@ export class UserMemoryEntity implements User {
     nickname: string,
     password: string,
     name: string,
-    sex: Sex,
     birthDate: string,
     photo: string,
     phoneNumber: string,
-    hopePosition: string,
+    sex: Sex,
+    hopePosition: Position,
     battingType: BattingType,
     pitchingType: PitchingType,
   ): UserMemoryEntity {
@@ -83,10 +84,10 @@ export class UserMemoryEntity implements User {
     user.nickname = nickname;
     user.password = password;
     user.name = name;
-    user.sex = sex;
     user.birthDate = birthDate;
     user.photo = photo;
     user.phoneNumber = phoneNumber;
+    user.sex = sex;
     user.hopePosition = hopePosition;
     user.battingType = battingType;
     user.pitchingType = pitchingType;

@@ -1,8 +1,9 @@
+import { validateSync, ValidationError } from 'class-validator';
 import { UserMemoryEntity } from './user.memory-entity';
 import { Sex } from './sex';
 import { BattingType } from './batting-type';
 import { PitchingType } from './pitching-type';
-import { validateSync, ValidationError } from 'class-validator';
+import { Position } from './position';
 
 describe('UserMemoryEntity', () => {
   let user: UserMemoryEntity;
@@ -12,11 +13,11 @@ describe('UserMemoryEntity', () => {
   const nickname = 'nickname';
   const password = 'password';
   const name = 'name';
-  const sex = Sex.MALE;
   const birthDate = '2020-01-01';
   const photo = 'photo';
   const phoneNumber = '01012345678';
-  const hopePosition = 'hopePosition';
+  const sex = Sex.MALE;
+  const hopePosition = Position.P;
   const battingType = BattingType.LEFT;
   const pitchingType = PitchingType.RIGHT;
 
@@ -27,10 +28,10 @@ describe('UserMemoryEntity', () => {
       nickname,
       password,
       name,
-      sex,
       birthDate,
       photo,
       phoneNumber,
+      sex,
       hopePosition,
       battingType,
       pitchingType,
