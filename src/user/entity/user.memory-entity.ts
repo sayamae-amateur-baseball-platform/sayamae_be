@@ -3,6 +3,7 @@ import {
   IsEnum,
   IsMobilePhone,
   IsNotEmpty,
+  IsNumber,
   IsNumberString,
   IsString,
 } from 'class-validator';
@@ -13,6 +14,14 @@ import { Sex } from '../../user/entity/sex';
 import { User } from '../../user/entity/user.entity';
 
 export class UserMemoryEntity implements User {
+  @IsNumber()
+  @IsNotEmpty()
+  id: number;
+
+  @IsString()
+  @IsNotEmpty()
+  userName: string;
+
   @IsString()
   @IsNotEmpty()
   nickname: string;
