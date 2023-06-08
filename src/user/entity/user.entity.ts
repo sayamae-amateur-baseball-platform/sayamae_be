@@ -2,7 +2,18 @@ import { BattingType } from './batting-type';
 import { PitchingType } from './pitching-type';
 import { Sex } from './sex';
 
-export interface User {
+export abstract class User {
+  /**
+   * 유저 고유 ID
+   */
+  id: number;
+
+  /**
+   * 유저 이름
+   * 로그인 할때 사용
+   */
+  userName: string;
+
   /**
    * 닉네임
    */

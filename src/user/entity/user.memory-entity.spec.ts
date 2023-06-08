@@ -7,6 +7,8 @@ import { validateSync, ValidationError } from 'class-validator';
 describe('UserMemoryEntity', () => {
   let user: UserMemoryEntity;
 
+  const id = 1;
+  const userName = 'userName';
   const nickname = 'nickname';
   const password = 'password';
   const name = 'name';
