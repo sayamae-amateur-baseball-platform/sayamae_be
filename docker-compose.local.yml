@@ -13,4 +13,4 @@ services:
       - |
           npm run start:dev
     volumes:
-      - ./:/api/
+      - ./:/app/
