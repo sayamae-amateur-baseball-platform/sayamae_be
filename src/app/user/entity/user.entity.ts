@@ -1,7 +1,7 @@
 import { BattingType } from './batting-type';
 import { PitchingType } from './pitching-type';
-import { Sex } from './sex';
 import { Position } from './position';
+import { Sex } from './sex';
 
 export abstract class User {
   /**
