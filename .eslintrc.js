@@ -28,5 +28,43 @@ module.exports = {
       'error',
       { classes: ['field', 'constructor', 'method'] },
     ],
-  },
-};
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'type',
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+          'unknown',
+        ],
+        pathGroups: [
+          {
+            pattern: '@nestjs/*',
+            group: 'external',
+            position: 'before',
+          },
+          {
+            pattern: '@src/**',
+            group: 'internal',
+            position: 'after',
+          },
+          {
+            pattern: '@app/**',
+            group: 'internal',
+            position: 'after',
+          },
+        ],
+        pathGroupsExcludedImportTypes: [],
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+        'newlines-between': 'always',
+      },
+    ],
+  }
+}
