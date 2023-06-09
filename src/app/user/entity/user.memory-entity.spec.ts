@@ -1,9 +1,10 @@
 import { validateSync, ValidationError } from 'class-validator';
-import { UserMemoryEntity } from './user.memory-entity';
-import { Sex } from './sex';
+
 import { BattingType } from './batting-type';
 import { PitchingType } from './pitching-type';
 import { Position } from './position';
+import { Sex } from './sex';
+import { UserMemoryEntity } from './user.memory-entity';
 
 describe('UserMemoryEntity', () => {
   let user: UserMemoryEntity;
